@@ -1,0 +1,30 @@
+.main-header{
+    margin-top: 48px;
+    height: 48px;
+    width: 100vw;
+    background-color: #0f0f0f;
+    top:0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    border-bottom: grey 1px solid;
+    padding-left: 10px;
+    .text-primary{
+        width: fit-content;
+        border-spacing: 0 50px;
+        // border-bottom: white 1px solid;
+        color:white;
+    }
+    .text-primary::after{
+        position: absolute;
+        width: 75px;height: 2px;
+        top:46px; margin-left: -35px;
+        transform: translateX(-50%);
+        content: '';
+        background-color: #fff;
+    }
+    .text-secondary{
+        color: gray;
+    }
+}
