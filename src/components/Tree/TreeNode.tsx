@@ -6,6 +6,10 @@ import { useCreate } from "src/api/Rows";
 const TreeNode = ({ node }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [inputValue, setInputValue] = useState(node.rowName);
+    const [salaryValue, setSalaryValue] = useState(node.salary);
+    const [equipmentValue, setEquipmentValue] = useState(node.equipmentCosts);
+    const [supportValue, setSupportValue] = useState(node.supportCosts);
+    const [profitValue, setProfitValue] = useState(node.estimatedProfit);
     const createRow = useCreate()
 
     const handleCreate = (id: number)=>{

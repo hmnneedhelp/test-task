@@ -35,3 +35,24 @@ export const useCreate = (id:number)=>{
         }
     })
 }
+
+export const useUpdate = (id:number, values:{"equipmentCosts": 0,
+  "estimatedProfit": number,
+  "machineOperatorSalary": number,
+  "mainCosts": number,
+  "materials": number,
+  "mimExploitation": number,
+  "overheads": number,
+  "rowName": string,
+  "salary": number,
+  "supportCosts": number})=>{
+    return useMutation({
+      mutationKey:['UPDATE', id, values],
+      mutationFn: async (id, values) =>{
+        return(axios.post(
+          updateRow + id +'/update',
+          values,
+        ))
+      }
+    })
+  }
